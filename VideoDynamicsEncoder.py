@@ -76,10 +76,13 @@ class DynamicsEncoder:
         fps = video_cap.get(cv2.CAP_PROP_FPS)
         frames_in_memory = 2
         # video writer to AVI
-        out = cv2.VideoWriter(
-            "{0}{1}{2}".format(manipulated_video_path, os.sep, file_name),
-            cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
+        #out = cv2.VideoWriter(
+            #"{0}{1}{2}".format(manipulated_video_path, os.sep, file_name),
+            #cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
 
+        out = cv2.VideoWriter(
+            os.path.join(manipulated_video_path, file_name),
+            cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 10, (frame_width, frame_height))
         buf = np.zeros((frames_in_memory, frame_height, frame_width, 3), np.dtype('int64'))
         ret = True
 

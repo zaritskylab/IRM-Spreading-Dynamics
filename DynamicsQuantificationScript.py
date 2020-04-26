@@ -134,8 +134,10 @@ class DynamicsQuantification:
 
         attachment_dynamics, detachment_dynamics = self.count_dynamics_events(self.file_path)
         # saving numpy arrays
-        np.save("{0}{1}DynamicsNumpyArrays{1}{2}_attachment_signal_numpyArray".format(path_for_results, os.sep, file_name), attachment_dynamics)
-        np.save("{0}{1}DynamicsNumpyArrays{1}{2}_detachment_signal_numpyArray".format(path_for_results, os.sep, file_name), detachment_dynamics)
+        #np.save("{0}{1}DynamicsNumpyArrays{1}{2}_attachment_signal_numpyArray".format(path_for_results, os.sep, file_name), attachment_dynamics)
+        np.save(os.path.join(path_for_results, 'DynamicsNumpyArrays', '{}_attachment_signal_numpyArray'.format(file_name)), attachment_dynamics)
+        #np.save("{0}{1}DynamicsNumpyArrays{1}{2}_detachment_signal_numpyArray".format(path_for_results, os.sep, file_name), detachment_dynamics)
+        np.save(os.path.join(path_for_results, 'DynamicsNumpyArrays', '{}_detachment_signal_numpyArray'.format(file_name)), detachment_dynamics)
         t = ["{}".format(int(frame_num*self.seconds_per_frame)) for frame_num in range(0, len(attachment_dynamics))]
         fig, ax = plt.subplots()
         ax.plot(t, attachment_dynamics)
@@ -151,7 +153,8 @@ class DynamicsQuantification:
 
         plt.setp(ax, ylim=(0, 1))
         plt.tight_layout()
-        fig.savefig("{0}{1}DynamicsPlots{1}{2}_dynamicsSignalPlot.png".format(path_for_results, os.sep, file_name), dpi=300, bbox_inches="tight")
+        #fig.savefig("{0}{1}DynamicsPlots{1}{2}_dynamicsSignalPlot.png".format(path_for_results, os.sep, file_name), dpi=300, bbox_inches="tight")
+        fig.savefig(os.path.join(path_for_results, 'DynamicsPlots', '{}_dynamicsSignalPlot.png'.format(file_name)), dpi=300, bbox_inches="tight")
         return self.attach_threshold, self.detach_threshold
 
 
