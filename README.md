@@ -2,7 +2,7 @@
 
 April 24th, 2020
 
-Yishaia Zabary - yshaayaz@post.bgu.ac.il
+Yishaia Zabary - yishaiaz@post.bgu.ac.il
 
 # IRM Spreading Dynamics
 ## The repository includes Python3 source code and one test dataset for the spatial dynamics analysis of the assay (see citation) 
@@ -71,6 +71,6 @@ This code can be generalized to detect and quantify dynamics (attachment/detachm
 Please cite the following paper when using this code:
 [Soon to be updated]
 
-Please contact Yishaia Zabary, at yshaayaz@gmail.com, for any questions / suggestions / bug reports.
+Please contact Yishaia Zabary, at yishaiaz@post.bgu.ac.il, for any questions / suggestions / bug reports.
 
 -----------------
