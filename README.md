@@ -1,3 +1,5 @@
+![OnlyRBGIFS_Combined_WITH_annotations](https://user-images.githubusercontent.com/64355837/80463321-b6711d00-8940-11ea-9f5e-d9603eb8a995.gif)
+
 April 24th, 2020
 
 Yishaia Zabary - yshaayaz@post.bgu.ac.il
