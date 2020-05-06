@@ -64,7 +64,7 @@ class EntryPage(tk.Frame):
         check_button = Checkbutton(self, text="Use smoothing filter", variable=self.check_button_value_filter_param)
         check_button.grid(row=2, column=0)
         # Frames per second input
-        label = ttk.Label(self, text="Frames/second")
+        label = ttk.Label(self, text="Seconds/Frame")
         label.grid(row=2, column=1)
         self.time_scale = StringVar(value="5")
         attach_threshold_entry = ttk.Entry(self, width=10, textvariable=self.time_scale)
